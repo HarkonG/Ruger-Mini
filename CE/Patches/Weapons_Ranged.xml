@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+            
+                <!--===== TOOLS FOR THE TOOL GOD =====-->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+				    /Defs/ThingDef[defName ="GN_TrenchShotgun"]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>
+				    /Defs/ThingDef[defName ="GN_TrenchShotgun_B"]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>blade</label>
+                                <capacities>
+                                    <li>Cut</li>
+                                </capacities>
+                                <power>10</power>
+                                <cooldownTime>1.18</cooldownTime>
+                                <armorPenetrationBlunt>0.36</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.32</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>point</label>
+                                <capacities>
+                                    <li>Stab</li>
+                                </capacities>
+                                <power>10</power>
+                                <cooldownTime>1.19</cooldownTime>
+                                <chanceFactor>1.00</chanceFactor>
+                                <armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+                                <armorPenetrationSharp>1.0</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!--===== Trench Gun ===== -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>GN_TrenchShotgun</defName>
+                    <statBases>
+                        <Mass>3.2</Mass>
+                        <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+                        <ShotSpread>0.20</ShotSpread>
+                        <SwayFactor>1.30</SwayFactor>
+                        <Bulk>9.5</Bulk>
+                        <SightsEfficiency>0.8</SightsEfficiency>
+                        <WorkToMake>9600</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>55</Steel>
+                        <WoodLog>10</WoodLog>
+                        <ComponentIndustrial>1</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>12</range>
+                        <soundCast>GN_Shot_TrenchShotgun</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                        <reloadTime>0.9</reloadTime>
+                        <ammoSet>AmmoSet_12Gauge</ammoSet>
+                    </AmmoUser>
+                    <FireModes />
+                    <weaponTags>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!--===== Trench Gun (bayonet) ===== -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>GN_TrenchShotgun_B</defName>
+                    <statBases>
+                        <Mass>3.4</Mass>
+                        <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+                        <ShotSpread>0.22</ShotSpread>
+                        <SwayFactor>1.32</SwayFactor>
+                        <Bulk>10.0</Bulk>
+                        <SightsEfficiency>0.7</SightsEfficiency>
+                        <WorkToMake>9600</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>65</Steel>
+                        <WoodLog>10</WoodLog>
+                        <ComponentIndustrial>1</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>12</range>
+                        <soundCast>GN_Shot_TrenchShotgun</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                        <reloadTime>0.9</reloadTime>
+                        <ammoSet>AmmoSet_12Gauge</ammoSet>
+                    </AmmoUser>
+                    <FireModes />
+                    <weaponTags>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>
