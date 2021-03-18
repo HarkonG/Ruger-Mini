@@ -2,73 +2,69 @@
 
 <Defs>
 
-  <!--===== Trench Shotgun Bullet =====-->
+  <!--===== Mini-14 =====-->
   <ThingDef ParentName="BaseBullet">
-    <defName>GN_Bullet_TrenchShotgun</defName>
-    <label>M97 shotgun blast</label>
-    <graphicData>
-      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
+    <defName>GN_Bullet_Ruger_14Mini</defName>
+    <label>Mini-14 rifle bullet</label>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>18</damageAmountBase>
-      <stoppingPower>3</stoppingPower>
-      <armorPenetrationBase>0.14</armorPenetrationBase>
-      <speed>55</speed>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>70</speed>
     </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
   </ThingDef>
 
-  <!--===== Trench Gun ===== -->
-  <ThingDef ParentName="GNTS_BaseHumanMakeableGun">
-    <defName>GN_TrenchShotgun</defName>
-    <label>M97 "Trench Gun"</label>
-    <description>The Winchester Model 1897, also known as the Model 97, M97, or Trench Gun, was a pump-action shotgun with an external hammer and tube magazine manufactured by the Winchester Repeating Arms Company. \n\nDue to its high rate of fire through the slamfire function, the weapon received the nickname "trench sweeper" in an ancient war and is still popular and appreciated by jump pack assault troops and veterans today.</description>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GN_Ruger_14Mini</defName>
+    <label>Mini-14</label>
+    <description>The Mini-14 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_TrenchShotgun</texPath>
+      <texPath>Things/Weapons/GN_Ruger_14Mini</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.0</drawSize>
     </graphicData>
-    <equippedAngleOffset>45</equippedAngleOffset>
-    <soundInteract>Interact_Shotgun</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.78</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <WoodLog>10</WoodLog>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
     <recipeMaker>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <statBases>
-      <WorkToMake>15000</WorkToMake>
-      <Mass>3.4</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.87</AccuracyShort>
-      <AccuracyMedium>0.77</AccuracyMedium>
-      <AccuracyLong>0.64</AccuracyLong>
-      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>65</Steel>
-      <WoodLog>20</WoodLog>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_TrenchShotgun</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
-        <range>14</range>
-        <soundCast>GN_Shot_TrenchShotgun</soundCast>
+        <defaultProjectile>GN_Bullet_Ruger_14Mini</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>35</range>
+        <soundCast>GN_Shot_Ruger_Mini</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
       <li>
-        <label>M97 stock</label>
+        <label>stock</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -76,7 +72,7 @@
         <cooldownTime>2</cooldownTime>
       </li>
       <li>
-        <label>M97 barrel</label>
+        <label>barrel</label>
         <capacities>
           <li>Blunt</li>
           <li>Poke</li>
@@ -87,56 +83,69 @@
     </tools>
   </ThingDef>
 
-  <!--===== Trench Gun (bayonet) ===== -->
-  <ThingDef ParentName="GNTS_BaseHumanMakeableGun">
-    <defName>GN_TrenchShotgun_B</defName>
-    <label>M97 "Trench Gun" with bayonet</label>
-    <description>The Winchester Model 1897, also known as the Model 97, M97, or Trench Gun, was a pump-action shotgun with an external hammer and tube magazine manufactured by the Winchester Repeating Arms Company. \n\nDue to its high rate of fire through the slamfire function, the weapon received the nickname "trench sweeper" in an ancient war and is still popular and appreciated by jump pack assault troops and veterans today. \n\nThis M97 comes equipped with a sharp bayonet.</description>
+  <!--===== Mini-30 =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>GN_Bullet_Ruger_30Mini</defName>
+    <label>Mini-30 rifle bullet</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>60</speed>
+    </projectile>
     <graphicData>
-      <texPath>Things/Weapons/GN_TrenchShotgun_B</texPath>
+      <texPath>Things/Projectile/Bullet_big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.0</drawSize>
     </graphicData>
-    <equippedAngleOffset>45</equippedAngleOffset>
-    <soundInteract>Interact_Shotgun</soundInteract>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GN_Ruger_30Mini</defName>
+    <label>Mini-30</label>
+    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <graphicData>
+      <texPath>Things/Weapons/GN_Ruger_30Mini</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Chemfuel>10</Chemfuel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
     <recipeMaker>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <statBases>
-      <WorkToMake>17000</WorkToMake>
-      <Mass>3.4</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.87</AccuracyShort>
-      <AccuracyMedium>0.77</AccuracyMedium>
-      <AccuracyLong>0.64</AccuracyLong>
-      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>70</Steel>
-      <WoodLog>20</WoodLog>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_TrenchShotgun</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
-        <range>13</range>
-        <soundCast>GN_Shot_TrenchShotgun</soundCast>
+        <defaultProjectile>GN_Bullet_Ruger_30Mini</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>38</range>
+        <soundCast>GN_Shot_Ruger_Mini</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
       <li>
-        <label>M97 stock</label>
+        <label>stock</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -144,20 +153,12 @@
         <cooldownTime>2</cooldownTime>
       </li>
       <li>
-        <label>bayonet blade</label>
+        <label>barrel</label>
         <capacities>
-          <li>Cut</li>
+          <li>Blunt</li>
+          <li>Poke</li>
         </capacities>
         <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>bayonet point</label>
-        <capacities>
-          <li>Stab</li>
-        </capacities>
-        <power>19</power>
-        <armorPenetration>0.40</armorPenetration>
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
