@@ -61,8 +61,8 @@
                     <defName>GN_Ruger_14Mini</defName>
                     <statBases>
                         <WorkToMake>18000</WorkToMake>
-                        <Mass>4.00</Mass>
-                        <Bulk>11.00</Bulk>
+                        <Mass>3.10</Mass>
+                        <Bulk>8.00</Bulk>
                         <SwayFactor>1.44</SwayFactor>
                         <ShotSpread>0.05</ShotSpread>
                         <SightsEfficiency>1</SightsEfficiency>
@@ -99,8 +99,8 @@
                     <defName>GN_Ruger_30Mini</defName>
                     <statBases>
                         <WorkToMake>18500</WorkToMake>
-                        <Mass>4.00</Mass>
-                        <Bulk>10.80</Bulk>
+                        <Mass>3.10</Mass>
+                        <Bulk>8.00</Bulk>
                         <SwayFactor>1.34</SwayFactor>
                         <ShotSpread>0.05</ShotSpread>
                         <SightsEfficiency>1</SightsEfficiency>
