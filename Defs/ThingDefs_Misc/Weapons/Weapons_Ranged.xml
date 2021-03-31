@@ -22,6 +22,7 @@
     <defName>GN_Ruger_14Mini</defName>
     <label>Mini-14</label>
     <description>The Mini-14 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <techLevel>Industrial</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_14Mini</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -58,7 +59,7 @@
         <warmupTime>1</warmupTime>
         <range>35</range>
         <soundCast>GN_Shot_Ruger_Mini</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
@@ -81,6 +82,16 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
   </ThingDef>
 
   <!--===== Mini-30 =====-->
@@ -103,6 +114,7 @@
     <defName>GN_Ruger_30Mini</defName>
     <label>Mini-30</label>
     <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <techLevel>Industrial</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_30Mini</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -139,7 +151,7 @@
         <warmupTime>1</warmupTime>
         <range>38</range>
         <soundCast>GN_Shot_Ruger_Mini</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
@@ -162,6 +174,184 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--===== Mini-30 (Tactical) =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GN_Ruger_TacticalMini</defName>
+    <label>Mini-30 (Tactical)</label>
+    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/GN_Ruger_TacticalMini</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>17500</WorkToMake>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <Chemfuel>25</Chemfuel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>GN_Research</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>GN_Bullet_Ruger_30Mini</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>42</range>
+        <soundCast>GN_Shot_Ruger_SDMini</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--===== Mini-30 (Charged) =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>GN_Bullet_Ruger_ChargeMini</defName>
+    <label>Mini-30 charged bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>19</damageAmountBase>
+      <armorPenetrationBase>0.42</armorPenetrationBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GN_Ruger_ChargeMini</defName>
+    <label>Mini-30 (Charged)</label>
+    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/GN_Ruger_ChargeMini</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>43000</WorkToMake>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>55</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>GN_Bullet_Ruger_ChargeMini</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>38</range>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
   </ThingDef>
 
 </Defs>
