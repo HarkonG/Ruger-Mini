@@ -190,7 +190,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_Ruger_TacticalMini</defName>
     <label>Mini-30 (Tactical)</label>
-    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians. This version comes with new polymer furniture to provide better ergonomics as well as an holographic sight.</description>
     <techLevel>Industrial</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_TacticalMini</texPath>
@@ -282,7 +282,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_Ruger_ChargeMini</defName>
     <label>Mini-30 (Charged)</label>
-    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_ChargeMini</texPath>
@@ -317,7 +317,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>GN_Bullet_Ruger_ChargeMini</defaultProjectile>
         <warmupTime>1</warmupTime>
-        <range>38</range>
+        <range>42</range>
         <soundCast>Shot_ChargeRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
