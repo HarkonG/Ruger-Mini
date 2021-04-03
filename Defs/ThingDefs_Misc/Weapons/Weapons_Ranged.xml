@@ -82,14 +82,14 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <thingSetMakerTags>
+    <thingSetMakerTags Inherit="False">
       <li>RewardStandardLowFreq</li>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
-    <weaponTags>
+    <weaponTags Inherit="False">
       <li>SimpleGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
+    <thingCategories Inherit="False">
       <li>GunNut</li>
     </thingCategories>
   </ThingDef>
@@ -113,7 +113,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_Ruger_30Mini</defName>
     <label>Mini-30</label>
-    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
+    <description>The Mini-30 is the big brother of the Mini-14, chambered in 7.62 this semi-automatic rifle is a reliable choice for hunting big game as well as defeating armored oponents.</description>
     <techLevel>Industrial</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_30Mini</texPath>
@@ -174,14 +174,14 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <thingSetMakerTags>
+    <thingSetMakerTags Inherit="False">
       <li>RewardStandardLowFreq</li>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
-    <weaponTags>
+    <weaponTags Inherit="False">
       <li>SimpleGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
+    <thingCategories Inherit="False">
       <li>GunNut</li>
     </thingCategories>
   </ThingDef>
@@ -190,7 +190,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_Ruger_TacticalMini</defName>
     <label>Mini-30 (Tactical)</label>
-    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians. This version comes with new polymer furniture to provide better ergonomics as well as an holographic sight.</description>
+    <description>This custom Mini-30 comes with new polymer furniture to provide better ergonomics as well as an holographic sight, making it easier and more confortable to shoot than the regular Mini-30.</description>
     <techLevel>Industrial</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_TacticalMini</texPath>
@@ -266,7 +266,7 @@
   <!--===== Mini-30 (Charged) =====-->
   <ThingDef ParentName="BaseBullet">
     <defName>GN_Bullet_Ruger_ChargeMini</defName>
-    <label>Mini-30 charged bullet</label>
+    <label>Mini-14 charged bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Charge_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -281,8 +281,8 @@
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_Ruger_ChargeMini</defName>
-    <label>Mini-30 (Charged)</label>
-    <description>The Mini-30 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
+    <label>Mini-14 (Charged)</label>
+    <description>This Mini-14 has been modified to use pulse-charge technology which charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Weapons/GN_Ruger_ChargeMini</texPath>
@@ -296,7 +296,7 @@
       <AccuracyShort>0.80</AccuracyShort>
       <AccuracyMedium>0.95</AccuracyMedium>
       <AccuracyLong>0.95</AccuracyLong>
-      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Plasteel>55</Plasteel>
@@ -342,14 +342,14 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <thingSetMakerTags>
+    <thingSetMakerTags Inherit="False">
       <li>RewardStandardLowFreq</li>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
-    <weaponTags>
+    <weaponTags Inherit="False">
       <li>SpacerGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
+    <thingCategories Inherit="False">
       <li>GunNut</li>
     </thingCategories>
   </ThingDef>
