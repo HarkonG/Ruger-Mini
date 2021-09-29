@@ -10,12 +10,19 @@
 	<description>
 	Welcome to Gun Nut - Ruger Mini!
 	</description>
+	<modDependencies>
+		<li>
+			<packageId>Harkon.GunNut.CORE</packageId>
+			<displayName>[HRK] Gun Nut - CORE</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2614317714</steamWorkshopUrl>
+		</li>
+	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
-		<li>XeoNovaDan.ProperShotguns</li>
-		<li>swedishmask.ProperShotgunsPatch</li>
+		<li>Ludeon.RimWorld.Ideology</li>
 		<li>CETeam.CombatExtended</li>
 		<li>VanillaExpanded.VWE</li>
+		<li>Harkon.GunNut.CORE</li>
 	</loadAfter>
 </ModMetaData>
