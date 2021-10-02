@@ -175,7 +175,7 @@
   <!--===== Mini-30 (Tactical) =====-->
   <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
     <defName>HRK_Ruger_TacticalMini</defName>
-    <label>Mini-30 (tactical)</label>
+    <label>Mini-30 (custom)</label>
     <description>This custom Mini-30 comes with new polymer furniture to provide better ergonomics as well as an holographic sight, making it easier and more confortable to shoot than the regular Mini-30.</description>
     <techLevel>Industrial</techLevel>
     <graphicData>
