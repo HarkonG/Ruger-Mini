@@ -5,7 +5,7 @@
   <!--===== Mini-14 =====-->
   <ThingDef ParentName="BaseBullet">
     <defName>HRK_Bullet_Ruger_14Mini</defName>
-    <label>Mini-14 rifle bullet</label>
+    <label>Mini-14 bullet</label>
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>14</damageAmountBase>
@@ -18,7 +18,7 @@
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>HRK_Ruger_14Mini</defName>
     <label>Mini-14</label>
     <description>The Mini-14 is a lightweight semi-automatic rifle manufactured by Ruger used by military personnel, law enforcement personnel, and civilians.</description>
@@ -90,7 +90,7 @@
   <!--===== Mini-30 =====-->
   <ThingDef ParentName="BaseBullet">
     <defName>HRK_Bullet_Ruger_30Mini</defName>
-    <label>Mini-30 rifle bullet</label>
+    <label>Mini-30 bullet</label>
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>17</damageAmountBase>
@@ -103,7 +103,7 @@
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>HRK_Ruger_30Mini</defName>
     <label>Mini-30</label>
     <description>The Mini-30 is the big brother of the Mini-14, chambered in 7.62 this semi-automatic rifle is a reliable choice for hunting big game as well as defeating armored oponents.</description>
@@ -173,7 +173,7 @@
   </ThingDef>
 
   <!--===== Mini-30 (Tactical) =====-->
-  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+  <!--<ThingDef ParentName="BaseHumanMakeableGun">
     <defName>HRK_Ruger_TacticalMini</defName>
     <label>Mini-30 (custom)</label>
     <description>This custom Mini-30 comes with new polymer furniture to provide better ergonomics as well as an holographic sight, making it easier and more confortable to shoot than the regular Mini-30.</description>
@@ -243,10 +243,10 @@
     <equippedStatOffsets>
       <HuntingStealth>0.15</HuntingStealth>
     </equippedStatOffsets>
-  </ThingDef>
+  </ThingDef>-->
 
   <!--===== Mini-30 (Charged) =====-->
-  <ThingDef ParentName="BaseBullet">
+  <!-- <ThingDef ParentName="BaseBullet">
     <defName>HRK_Bullet_Ruger_ChargeMini</defName>
     <label>Mini-14 charged bullet</label>
     <graphicData>
@@ -261,7 +261,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>HRK_Ruger_ChargeMini</defName>
     <label>Mini-14 (charged)</label>
     <description>This Mini-14 has been modified to use pulse-charge technology which charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
@@ -327,6 +327,6 @@
     <weaponTags>
       <li>SpacerGun</li>
     </weaponTags>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>
