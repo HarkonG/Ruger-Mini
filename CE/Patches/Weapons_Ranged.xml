@@ -13,9 +13,7 @@
                 <li Class="PatchOperationReplace">
                     <xpath>
 						/Defs/ThingDef[
-							defName = "HRK_Ruger_14Mini" or
-                            defName = "HRK_Ruger_TacticalMini" or
-                            defName = "HRK_Ruger_ChargeMini" or							
+							defName = "HRK_Ruger_14Mini" or                            							
 							defName = "HRK_Ruger_30Mini"
 						]/tools
                     </xpath>
@@ -130,81 +128,6 @@
                         <aiAimMode>AimedShot</aiAimMode>
                     </FireModes>
                     <researchPrerequisite>GasOperation</researchPrerequisite>
-                </li>
-
-                <!--===== HRK_Ruger_TacticalMini ===== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_Ruger_TacticalMini</defName>
-                    <statBases>
-                        <WorkToMake>20500</WorkToMake>
-                        <Mass>3.10</Mass>
-                        <Bulk>8.00</Bulk>
-                        <SwayFactor>1.32</SwayFactor>
-                        <ShotSpread>0.04</ShotSpread>
-                        <SightsEfficiency>1.2</SightsEfficiency>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>45</Steel>
-                        <Chemfuel>20</Chemfuel>
-                        <ComponentIndustrial>3</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
-                        <warmupTime>1.2</warmupTime>
-                        <range>60</range>
-                        <soundCast>HRK_Shot_Ruger_SDMini</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>20</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>AimedShot</aiAimMode>
-                    </FireModes>
-                </li>
-
-                <!--===== HRK_Ruger_ChargeMini ===== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_Ruger_ChargeMini</defName>
-                    <statBases>
-                        <WorkToMake>40000</WorkToMake>
-                        <Mass>3.10</Mass>
-                        <Bulk>8.00</Bulk>
-                        <SwayFactor>1.32</SwayFactor>
-                        <ShotSpread>0.04</ShotSpread>
-                        <SightsEfficiency>1.4</SightsEfficiency>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>40</Steel>
-                        <Plasteel>20</Plasteel>
-                        <ComponentIndustrial>7</ComponentIndustrial>
-                        <Chemfuel>10</Chemfuel>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_8x35mmCharged</defaultProjectile>
-                        <warmupTime>1.0</warmupTime>
-                        <range>60</range>
-                        <soundCast>Shot_ChargeRifle</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>25</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_8x35mmCharged</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>AimedShot</aiAimMode>
-                    </FireModes>
                 </li>
 
             </operations>
