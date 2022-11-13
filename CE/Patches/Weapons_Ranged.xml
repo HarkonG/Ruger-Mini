@@ -1,136 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Combat Extended</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-
-                <!--===== TOOLS FOR THE TOOL GOD =====-->
-                <li Class="PatchOperationReplace">
-                    <xpath>
+            <!--===== TOOLS FOR THE TOOL GOD =====-->
+            <li Class="PatchOperationReplace">
+                <xpath>
 						/Defs/ThingDef[
 							defName = "HRK_Ruger_14Mini" or                            							
 							defName = "HRK_Ruger_30Mini"
 						]/tools
-                    </xpath>
-                    <value>
-                        <tools>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>stock</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <chanceFactor>1.5</chanceFactor>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>barrel</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>5</power>
-                                <cooldownTime>2.02</cooldownTime>
-                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>muzzle</label>
-                                <capacities>
-                                    <li>Poke</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
-                            </li>
-                        </tools>
-                    </value>
-                </li>
+                </xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>5</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
 
-                <!--===== HRK_Ruger_14Mini ===== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_Ruger_14Mini</defName>
-                    <statBases>
-                        <WorkToMake>18000</WorkToMake>
-                        <Mass>3.10</Mass>
-                        <Bulk>8.00</Bulk>
-                        <SwayFactor>1.44</SwayFactor>
-                        <ShotSpread>0.05</ShotSpread>
-                        <SightsEfficiency>1</SightsEfficiency>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>55</Steel>
-                        <WoodLog>10</WoodLog>
-                        <ComponentIndustrial>3</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
-                        <warmupTime>1.0</warmupTime>
-                        <range>52</range>
-                        <soundCast>HRK_Shot_Ruger_Mini</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>20</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>AimedShot</aiAimMode>
-                    </FireModes>
-                    <researchPrerequisite>GasOperation</researchPrerequisite>
-                </li>
+            <!--===== HRK_Ruger_14Mini ===== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_Ruger_14Mini</defName>
+                <statBases>
+                    <WorkToMake>18000</WorkToMake>
+                    <Mass>3.10</Mass>
+                    <Bulk>8.00</Bulk>
+                    <SwayFactor>1.44</SwayFactor>
+                    <ShotSpread>0.05</ShotSpread>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                </statBases>
+                <costList>
+                    <Steel>55</Steel>
+                    <WoodLog>10</WoodLog>
+                    <ComponentIndustrial>3</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>True</hasStandardCommand>
+                    <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                    <warmupTime>1.0</warmupTime>
+                    <range>52</range>
+                    <soundCast>HRK_Shot_Ruger_Mini</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>20</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+                <researchPrerequisite>GasOperation</researchPrerequisite>
+            </li>
 
-                <!--===== HRK_Ruger_30Mini ===== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_Ruger_30Mini</defName>
-                    <statBases>
-                        <WorkToMake>18500</WorkToMake>
-                        <Mass>3.10</Mass>
-                        <Bulk>8.00</Bulk>
-                        <SwayFactor>1.34</SwayFactor>
-                        <ShotSpread>0.05</ShotSpread>
-                        <SightsEfficiency>1</SightsEfficiency>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>55</Steel>
-                        <Chemfuel>10</Chemfuel>
-                        <ComponentIndustrial>3</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
-                        <warmupTime>1.1</warmupTime>
-                        <range>58</range>
-                        <soundCast>HRK_Shot_Ruger_Mini</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>20</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>AimedShot</aiAimMode>
-                    </FireModes>
-                    <researchPrerequisite>GasOperation</researchPrerequisite>
-                </li>
+            <!--===== HRK_Ruger_30Mini ===== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_Ruger_30Mini</defName>
+                <statBases>
+                    <WorkToMake>18500</WorkToMake>
+                    <Mass>3.10</Mass>
+                    <Bulk>8.00</Bulk>
+                    <SwayFactor>1.34</SwayFactor>
+                    <ShotSpread>0.05</ShotSpread>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                </statBases>
+                <costList>
+                    <Steel>55</Steel>
+                    <Chemfuel>10</Chemfuel>
+                    <ComponentIndustrial>3</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>True</hasStandardCommand>
+                    <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <range>58</range>
+                    <soundCast>HRK_Shot_Ruger_Mini</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>20</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+                <researchPrerequisite>GasOperation</researchPrerequisite>
+            </li>
 
-            </operations>
-        </match>
+        </operations>
     </Operation>
 </Patch>
